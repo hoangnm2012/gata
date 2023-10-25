@@ -1,6 +1,6 @@
 # COL - Modal
 
-####Contact info
+#### Contact info
 - Name: Hoang Nguyen
 - Email: nmhoangis@gmail.com
 - Github: hoangnm2012
@@ -21,9 +21,6 @@ To install COL Modal, use the following command:
 ```bash
 yarn install || npm i
 ```
-
-### Live Demo: 
-Use the Live Demo here: https://col-modal.onrender.com
 
 ### Usage
 

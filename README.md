@@ -11,6 +11,9 @@
     yarn install || npm i
 ```
 
+### Live Demo: 
+Use the Live Demo here: https://col-modal.onrender.com
+
 ### Usage
 
 Runs the Client app in the development mode.<br />
@@ -37,7 +40,7 @@ For Simple Modal with the default size "md"
   isOpen={isOpen}
   onClose={() => setIsOpen(false)}
 >
-  <p>{sampleText}</p>
+  <p>Modal Content</p>
 </Modal>
 ```
 #### Advanced Usage

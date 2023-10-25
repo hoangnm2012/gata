@@ -1,0 +1,117 @@
+@import '../../variables.css';
+
+:root {
+  --modal-overlay-color: rgba(0, 0, 0, 0.4);
+  --modal-padding: var(--b-space-md);
+  --animation-top: -300px;
+  --modal-size-xs: 320px;
+  --modal-size-sm: 380px;
+  --modal-size-md: 440px;
+  --modal-size-lg: 620px;
+  --modal-size-xl: 780px;
+  --modal-size: var(--modal-size-md);
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  padding: var(--b-space-xl);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--modal-overlay-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.modal[data-centered] {
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-color: var(--c-ui-lighter);
+  color: var(--c-black);
+  padding: 0;
+  width: 100%;
+  animation-name: animatetop;
+  animation-duration: var(--animation-delay);
+  max-width: 100%;
+  flex: 0 0 var(--modal-size);
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modalHeader {
+  padding: var(--b-space-md);
+  padding-bottom: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalHeader h2 {
+  font-size: var(--font-size-big);
+  margin: 0;
+}
+
+.modalBody {
+  padding: var(--modal-padding);
+  background-color: var(--c-ui-lighter);
+}
+
+.modalFooter {
+}
+
+.modalFooter h4 {
+  margin-top: var(--b-space-xs);
+  margin-bottom: var(--b-space-xs);
+}
+
+/* CSS for Modal Component with Size Support */
+.modalContent.xs {
+  flex-basis: var(--modal-size-xs);
+}
+
+.modalContent.sm {
+  flex-basis: var(--modal-size-sm);
+}
+
+.modalContent.md {
+  flex-basis: var(--modal-size-md);
+}
+
+.modalContent.lg {
+  flex-basis: var(--modal-size-lg);
+}
+
+.modalContent.xl {
+  flex-basis: var(--modal-size-xl);
+}
+
+.btnClose {
+  background-image: url("../../assets/close.svg");
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
